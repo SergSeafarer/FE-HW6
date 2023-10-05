@@ -52,3 +52,27 @@ switch(true) {
     userFavoriteSport = 'Круто! Хочешь стати Роджером Федерером?';
     break;
 }
+
+if(userAge === null && userCity === null && userFavoriteSport === null) {
+  alert('Ви не надали про себе даних');
+} else if(userAge !== null && userCity !== null && userFavoriteSport !== null) {
+  alert ('Тобі ' + userAge + ' років, ' + userCity + '. ' + userFavoriteSport);
+} else if(userFavoriteSport !== null && userCity !== null) {
+  alert(userCity + '. ' + userFavoriteSport);
+} else if(userCity !== null && userAge !== null) {
+  alert('Тобі ' + userAge + ' років, ' + userCity + '.');
+} else if(userAge !== null && userFavoriteSport !== null) {
+  alert('Тобі ' + userAge + ' років. ' + userFavoriteSport);
+} else if(userFavoriteSport === null && userCity === null) {
+  alert('Тобі ' + userAge + ' років.');
+} else if(userCity === null && userAge === null) {
+  alert(userFavoriteSport);
+} else if(userFavoriteSport === null && userAge === null) {
+  alert(userCity);
+} else if(userFavoriteSport === null) {
+  alert(userCity + '. ' + userFavoriteSport);
+} else if(userCity === null) {
+  alert('Тобі ' + userAge + ' років' + '. ' + userFavoriteSport);
+} else if(userAge === null) {
+  alert('Тобі ' + userAge + ' років, ' + userCity);
+}
