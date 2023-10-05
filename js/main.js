@@ -32,3 +32,23 @@ switch(true) {
   default: 
     userCity = 'Ти живеш у місті ' + userCity; 
 } 
+
+let userFavoriteSport = prompt('Введіть ваш улюблений вид спорту');
+while((isNaN(userFavoriteSport) === false && userFavoriteSport !== null && userFavoriteSport.trim() !== '') || Number.parseInt(userFavoriteSport)) {
+  userFavoriteSport = prompt('Введіть ваш улюблений вид спорту');
+}
+switch(true) {
+  case userFavoriteSport === null || userFavoriteSport.trim() === '':
+    alert('Шкода, що Ви не захотіли ввести свій улюблений вид спорту');
+    userFavoriteSport = null;
+    break;
+  case userFavoriteSport === 'бокс':
+    userFavoriteSport = 'Круто! Хочешь стати Олександром Усіком?';
+    break;
+  case userFavoriteSport === 'плавання':
+    userFavoriteSport = 'Круто! Хочешь стати Майклом Фред Фелпсом?';
+    break;
+  case userFavoriteSport === 'теніс':
+    userFavoriteSport = 'Круто! Хочешь стати Роджером Федерером?';
+    break;
+}
