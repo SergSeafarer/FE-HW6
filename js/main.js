@@ -20,13 +20,13 @@ switch(true) {
     alert('Шкода, що Ви не захотіли ввести своє місто проживання');
     userCity = null;
     break;
-  case userCity === 'Київ':
+  case userCity === 'Київ' || userCity === 'київ':
     userCity = 'Ти живешь у столиці України';
     break;
-  case userCity === 'Вашингтон':
+  case userCity === 'Вашингтон' || userCity === 'вашингтон':
     userCity = 'Ти живешь у столиці США';
     break;
-  case userCity === 'Лондон': 
+  case userCity === 'Лондон' || userCity === 'лондон': 
     userCity = 'Ти живешь у столиці Великої Британії';
     break;
   default: 
